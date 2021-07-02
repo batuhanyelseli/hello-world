@@ -1,0 +1,15 @@
+print("enter original text")
+original=input()
+print("enter the text to be searched")
+txt=input()
+if len(txt)> len(original):
+    print("0")
+count=0;
+for i in range(len(original)-len(txt)+1):
+    if original[i]==txt[0]:
+        for k in range(len(txt)):
+            if original[i+k]!=txt[k]:
+                break
+        if k==len(txt)-1:
+            count+=1
+print(count)
